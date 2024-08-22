@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinder Swipe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script src="./js/addCards.js" defer async></script>
+<script src="./js/animateCard.js" defer async></script>
+
+<body>
+    <main>
+        <section>
+            <header>
+                <img src="tinder-logo.webp" alt="Tinder Logo">
+            </header>
+
+            <div class="cards">
+                <div class="card">
+                    <img src="../empty.jpg" alt="Empty Card">
+                    <h2>No new profiles added yet</h2>
+                    <p>Are you up to date with the profiles</p>
+                    <button class="add-card">Add Card</button>
+                </div>
+            </div>
+
+            <footer>
+                <button class="isUndo" aria-label="undo"><!-- ↩️ --></button>
+                <button class="isRemove isBig" aria-label="remove"><!-- ❌ --></button>
+                <button class="isStar " aria-label="star"><!-- ⭐️ --></button>
+                <button class="isFav isBig" aria-label="fav"><!-- 🩵 --></button>
+                <button class="isZap " aria-label="zap"><!-- ⚡ --></button>
+            </footer>
+        </section>
+    </main>
+</body>
+
+</html>

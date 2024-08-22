@@ -1,0 +1,204 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #d9d9d9;
+}
+
+main {
+    background: url('./iphone.webp') no-repeat center center;
+    background-size: cover;
+    width: 320px;
+    height: 640px;
+    display: flex;
+    filter: drop-shadow(0 0 10px rgba(221, 184, 61, 0.35));
+    ;
+}
+
+section {
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 32px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 6px;
+    margin: 24px;
+    gap: 24px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+
+    & img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.cards {
+    position: relative;
+    cursor: grab;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    & article,
+    .card {
+        inset: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        position: absolute;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+        transition: transform 0.3s ease, rotate 0.3s ease, cursor 0.3s ease;
+
+        & .choice {
+            opacity: 0;
+            font-weight: bold;
+            position: absolute;
+            top: 20px;
+            right: 16px;
+            z-index: 999;
+            font-size: 1rem;
+            background-color: white;
+            padding: 4px 8px;
+            border-radius: 10px;
+            color: white;
+            transition: opacity 0.2s ease;
+        }
+
+        & .nope {
+            border-color: #ff0000;
+            background-color: #ff0000;
+            transform: rotate(30deg);
+        }
+
+        & .like {
+            width: fit-content;
+            left: 16px;
+            border-color: #00ff00;
+            background-color: #38ac38;
+            transform: rotate(-30deg);
+        }
+
+        &.go-left {
+            transform: translateX(-200%) rotate(-10deg) !important;
+        }
+
+        &.go-right {
+            transform: translateX(200%) rotate(10deg) !important;
+        }
+
+        &.go-left,
+        &.go-right {
+            transition: transform 0.3s ease, rotate 0.3s ease, cursor 0.3s ease;
+        }
+
+        &.reset {
+            transition: transform 0.3s ease;
+            transform: translateX(0) rotate(0deg) !important;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        & h2 {
+            color: white;
+            font-size: 1.5rem;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            inset: 0;
+            align-items: flex-end;
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+            z-index: 3;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, transparent 40%);
+
+            & span {
+                width: fit-content;
+                min-width: fit-content;
+                font-size: .6rem;
+                color: white;
+                background-color: rgb(197, 97, 97);
+                padding: 5px 8px;
+                border-radius: 10px;
+                margin-left: 10px;
+
+                &.active {
+                    background-color: rgb(32, 110, 71);
+                }
+            }
+        }
+    }
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+
+    & button {
+        width: 32px;
+        height: 32px;
+        margin: 2px;
+        border: none;
+        border-radius: 100%;
+        cursor: pointer;
+        background: url('./tinder-icons.webp') no-repeat;
+        transition: transform 0.3s;
+        background-size: 200px;
+        background-position: -1px -1px;
+        transition: all 0.4s ease !important;
+
+        &:hover {
+            scale: 1.1;
+            background-color: rgba(34, 67, 87, 0.39);
+        }
+
+        &.isUndo {
+            background-position: -165px -1px;
+        }
+
+        &.isRemove {
+            background-position: -184px -2px;
+        }
+        
+        &.isFav {
+            background-position: -63px -2px;
+        }
+        
+        &.isStar {
+            background-position: -85px -1px;
+        }
+        
+        &.isBig {
+            background-size: 300px;
+            width: 48px;
+            height: 48px;
+        }
+    }
+}

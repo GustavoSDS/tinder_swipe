@@ -1,0 +1,49 @@
+{
+    "cards": [
+        {
+            "image": "./photos/1.jpg",
+            "name": "John Doe",
+            "active": true,
+            "lastActive": 20,
+            "likes": 25,
+            "comments": 10,
+            "shares": 20
+        },
+        {
+            "image": "./photos/2.jpg",
+            "name": "Harry Potter",
+            "active": false,
+            "lastActive": 20,
+            "likes": 25,
+            "comments": 30,
+            "shares": 50
+        },
+        {
+            "image": "./photos/3.jpg",
+            "name": "Freddie Mercury",
+            "active": true,
+            "lastActive": 20,
+            "likes": 25,
+            "comments": 20,
+            "shares": 10
+        },
+        {
+            "image": "./photos/4.jpg",
+            "name": "Michael Jackson",
+            "active": true,
+            "lastActive": 20,
+            "likes": 25,
+            "comments": 40,
+            "shares": 15
+        },
+        {
+            "image": "./photos/5.jpg",
+            "name": "Adele Adkins",
+            "active": true,
+            "lastActive": 20,
+            "likes": 25,
+            "comments": 12,
+            "shares": 5
+        }
+    ]
+}
