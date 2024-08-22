@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Permite a los usuarios explorar perfiles de personas y expresar su interés deslizando hacia la derecha o su desinterés deslizando hacia la izquierda, similar a la popular aplicación Tinder.">
+    <meta name="keywords" content="Tinder, Swipe, JavaScript, HTML, CSS">
+    <meta name="author" content="Gustavo S. Dos Santos">    
     <title>Tinder Swipe</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<script src="./js/index.js" defer async></script>
 <script src="./js/addCards.js" defer async></script>
 <script src="./js/animateCard.js" defer async></script>
 
@@ -14,24 +18,24 @@
     <main>
         <section>
             <header>
-                <img src="tinder-logo.webp" alt="Tinder Logo">
+                <img src="./assets/images/tinder-logo.webp" alt="Tinder Logo">
             </header>
 
             <div class="cards">
                 <div class="card">
-                    <img src="../empty.jpg" alt="Empty Card">
-                    <h2>No new profiles added yet</h2>
-                    <p>Are you up to date with the profiles</p>
-                    <button class="add-card">Add Card</button>
+                    <img src="./assets/images/empty.jpg" alt="Empty Card">
+                    <div class="info">
+                        <h2>No hay más perfiles nuevos el día de hoy</h2>
+                    </div>
                 </div>
             </div>
 
             <footer>
-                <button class="isUndo" aria-label="undo"><!-- ↩️ --></button>
-                <button class="isRemove isBig" aria-label="remove"><!-- ❌ --></button>
-                <button class="isStar " aria-label="star"><!-- ⭐️ --></button>
-                <button class="isFav isBig" aria-label="fav"><!-- 🩵 --></button>
-                <button class="isZap " aria-label="zap"><!-- ⚡ --></button>
+                <button class="isUndo" aria-label="undo">↪️</button>
+                <button class="isRemove isBig" aria-label="remove">❌</button>
+                <button class="isStar " aria-label="star">⭐️</button>
+                <button class="isFav isBig" aria-label="fav">🩵</button>
+                <button class="isZap " aria-label="zap">⚡</button>
             </footer>
         </section>
     </main>

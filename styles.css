@@ -16,7 +16,7 @@ body {
 }
 
 main {
-    background: url('./iphone.webp') no-repeat center center;
+    background: url('./assets/images/iphone.webp') no-repeat center center;
     background-size: cover;
     width: 320px;
     height: 640px;
@@ -54,6 +54,13 @@ header {
     width: 100%;
     height: 100%;
     margin: 0 auto;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
 
     & article,
     .card {
@@ -120,22 +127,32 @@ header {
             object-fit: cover;
         }
 
-        & h2 {
-            color: white;
-            font-size: 1.5rem;
+        & .info {
             position: absolute;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             inset: 0;
             align-items: flex-end;
-            height: 100%;
             width: 100%;
+            height: 100%;
             padding: 10px;
             z-index: 3;
             background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, transparent 40%);
 
-            & span {
+            & h2 {
+                color: white;
+                font-size: 1.4rem;
+            }
+
+            & .age {
+                width: fit-content;
+                font-size: 1.2rem;
+                font-weight: 500;
+                font-style: italic;
+            }
+
+            & span:not(.age) {
                 width: fit-content;
                 min-width: fit-content;
                 font-size: .6rem;
@@ -144,6 +161,7 @@ header {
                 padding: 5px 8px;
                 border-radius: 10px;
                 margin-left: 10px;
+                z-index: 4;
 
                 &.active {
                     background-color: rgb(32, 110, 71);
@@ -166,39 +184,60 @@ footer {
         height: 32px;
         margin: 2px;
         border: none;
+        font-size: 1rem;
         border-radius: 100%;
         cursor: pointer;
-        background: url('./tinder-icons.webp') no-repeat;
-        transition: transform 0.3s;
-        background-size: 200px;
-        background-position: -1px -1px;
-        transition: all 0.4s ease !important;
+        background-color: transparent;
+        outline: none;
+        transition: all 0.4s ease;
+
+        &.pressed::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            background-color: rgba(152, 156, 158, 0.199);
+            transition: all 0.3s ease;
+            animation: pressed 0.3s ease;
+        }
 
         &:hover {
             scale: 1.1;
-            background-color: rgba(34, 67, 87, 0.39);
         }
 
         &.isUndo {
-            background-position: -165px -1px;
+            display: inline-block;
+            transform: rotate(180deg);
         }
 
         &.isRemove {
-            background-position: -184px -2px;
+            font-size: 1.1rem !important;
         }
-        
-        &.isFav {
-            background-position: -63px -2px;
-        }
-        
-        &.isStar {
-            background-position: -85px -1px;
-        }
-        
+
         &.isBig {
-            background-size: 300px;
+            font-size: 1.3rem;
             width: 48px;
             height: 48px;
         }
+
+        &.isZap {
+            display: inline-block;
+            transform: rotate(18deg);
+        }
+    }
+}
+
+@keyframes pressed {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
     }
 }

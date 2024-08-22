@@ -61,7 +61,6 @@ function starDrag(event) {
         }
 
         // Restablecer la animación después de un breve retraso
-        //TODO: Hacer que el retraso sea variable
         const decisionMade = Math.abs(pullDeltaX) >= threshold;
         const goRight = pullDeltaX >= 0;
 

@@ -1,0 +1,104 @@
+{
+    "cards": [
+        {
+            "image": "1.jpg",
+            "name": "Kevin Spacey",
+            "age": 24,
+            "active": true,
+            "lastActive": 20,
+            "likes": 25,
+            "comments": 10,
+            "shares": 20
+        },
+        {
+            "image": "2.jpg",
+            "name": "Rachel Green",
+            "age": 26,
+            "active": false,
+            "lastActive": 20,
+            "likes": 25,
+            "comments": 30,
+            "shares": 50
+        },
+        {
+            "image": "3.jpg",
+            "name": "Oliver Twist",
+            "age": 27,
+            "active": true,
+            "lastActive": 20,
+            "likes": 25,
+            "comments": 20,
+            "shares": 10
+        },
+        {
+            "image": "4.jpg",
+            "name": "Bruce Willis",
+            "age": 70,
+            "active": true,
+            "lastActive": 20,
+            "likes": 25,
+            "comments": 40,
+            "shares": 15
+        },
+        {
+            "image": "5.jpg",
+            "name": "Jake Gyllenhaal",
+            "age": 24,
+            "active": true,
+            "lastActive": 20,
+            "likes": 24,
+            "comments": 12,
+            "shares": 5
+        },
+        {
+            "image": "6.jpg",
+            "name": "Ariel Winter",
+            "age": 22,
+            "active": true,
+            "lastActive": 20,
+            "likes": 10,
+            "comments": 12,
+            "shares": 5
+        },
+        {
+            "image": "7.jpg",
+            "name": "Craig Ferguson",
+            "age": 53,
+            "active": false,
+            "lastActive": 20,
+            "likes": 25,
+            "comments": 12,
+            "shares": 5
+        },
+        {
+            "image": "8.jpg",
+            "name": "David Hasselhoff",
+            "age": 21,
+            "active": true,
+            "lastActive": 20,
+            "likes": 20,
+            "comments": 12,
+            "shares": 5
+        },
+        {
+            "image": "9.jpg",
+            "name": "Carrie Fisher",
+            "age": 23,
+            "active": false,
+            "lastActive": 20,
+            "likes": 23,
+            "comments": 12,
+            "shares": 5
+        },
+        {
+            "image": "10.jpg",
+            "name": "Tom Hanks",
+            "age": 25,
+            "active": true,
+            "lastActive": 20,
+            "likes": 25,
+            "comments": 12,
+            "shares": 5
+        }
+    ]
+}
