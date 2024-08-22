@@ -1,4 +1,5 @@
 const cards = document.querySelector('.cards');
+// Obtiene los datos de un archivo JSON y los agrega a la página, en el elemento <cards>
 fetch('./assets/data.json')
     .then(response => response.json())
     .then(data => {
