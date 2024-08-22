@@ -45,23 +45,23 @@ function startDrag(event) {
         const currentX = event.pageX ?? event.touches[0].pageX;
 
         // Calcula cuánto se ha movido desde la posición inicial
-        pullDeltaX = currentX - startX;
+        dragDeltaX = currentX - startX;
 
-        if (pullDeltaX === 0) return;
+        if (dragDeltaX === 0) return;
         isAnimating = true;
 
         // Calcula el ángulo de rotación basado en la distancia movida
-        const deg = pullDeltaX / 10;
+        const deg = dragDeltaX / 8;
 
         if (currentCard) {
 
-            currentCard.style.transform = `translateX(${pullDeltaX}px) rotate(${deg}deg)`;
+            currentCard.style.transform = `translateX(${dragDeltaX}px) rotate(${deg}deg)`;
             currentCard.style.cursor = 'grabbing';
 
             // Calcula la opacidad de los indicadores de elección basándose en el movimiento
-            const opacity = Math.abs(pullDeltaX) / 100;
+            const opacity = Math.abs(dragDeltaX) / 100;
             // Determina si el movimiento es hacia la derecha o hacia la izquierda
-            const isRight = pullDeltaX > 0;
+            const isRight = dragDeltaX > 0;
 
             // Selecciona el indicador de elección correcto según la dirección del movimiento
             const choice = isRight
