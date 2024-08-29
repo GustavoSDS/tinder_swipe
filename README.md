@@ -1,10 +1,10 @@
-# Proyecto realizado en base a la pagina de [100 Projectos JavaScript](https://www.javascript100.dev/) que pertence al autor [Midudev](https://github.com/midudev).
+# Tinder Swipe
 
 ## Screenshot
 ![screenshot](./assets/images/Screenshot.png)
 
 ## Vista previa
-![Click aquí](https://tinder-swipe-gsds.netlify.app)
+[Click aquí](https://tinder-swipe-gsds.netlify.app)
 
 ## Descripción
 Permite a los usuarios explorar perfiles de personas y 
